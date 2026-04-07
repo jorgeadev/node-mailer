@@ -1,56 +1,178 @@
 <!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Contact Us</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    </head>
-    <body>
-        <div class="container">
-            <h1 style="margin-top: 2em">NodeMailer Tutorial</h1>
-            <p>
-                Here's a sample Contact Form below. Check
-                <a href="https://github.com/victoria-lo/Nodemailer-Tutorial">repository</a>
-                to see full code.
-            </p>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-title">
-                        <h2 class="title">Contact Me</h2>
-                        <p>Any comments or feedback? Let Victoria know! Thank you.</p>
-                        <hr>
-                        <form action="send" id="constact-form" method="post" enctype="multipart/form-data">
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <input type="text" placeholder="Name" id="name" name="name" class="form-control" required>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input type="email" placeholder="Email" id="email" name="email" class="form-control" aria-describedby="emailHelp" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <input type="text" placeholder="Subject" id="subject" name="subject" class="form-control" required>
-                            </div>
-                            <div class="mb-3">
-                                <textarea name="message" id="message" rows="3" placeholder="Enter your message here..." class="form-control" required></textarea>
-                            </div>
-                            <div class="d-grid gap-2 col-4 mx-auto">
-                                <button type="submit" value="submit" class="btn btn-primary">Submit</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer>
-            <div class="footer-copyright text-center py-3">
-                © 2020 Made with ❤️ By
-                <a href="https://lo-victoria.com/">Dev Vito Code</a>
-            </div>
-        </footer>
-    </body>
+<html lang="en" class="h-full bg-slate-950 text-slate-200">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Get in Touch | Premium Contact Form</title>
+		<!-- Google Fonts: Outfit -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Tailwind CSS v4 Play CDN -->
+		<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+		<!-- External Premium Styles -->
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="flex flex-col items-center justify-center p-6 sm:p-12 overflow-x-hidden">
+		<!-- Decorative Elements -->
+		<div class="fixed top-0 left-0 w-full h-full pointer-events-none z-[-1] overflow-hidden">
+			<div
+				class="absolute -top-24 -left-24 w-96 h-96 bg-blue-600/10 blur-[120px] rounded-full"
+			></div>
+			<div
+				class="absolute top-1/2 -right-24 w-80 h-80 bg-purple-600/10 blur-[100px] rounded-full"
+			></div>
+		</div>
+
+		<!-- Main Content Container -->
+		<main class="w-full max-w-2xl transform">
+			<!-- Header Section -->
+			<header
+				class="text-center mb-10 space-y-3 animate-in fade-in slide-in-from-bottom-4 duration-1000"
+			>
+				<h1
+					class="text-4xl sm:text-5xl font-bold bg-linear-to-r from-blue-400 via-indigo-300 to-purple-400 bg-clip-text text-transparent"
+				>
+					Let's Build Something Great
+				</h1>
+				<p class="text-slate-400 text-lg font-light max-w-lg mx-auto leading-relaxed">
+					Have a project in mind or just want to say hello? Drop a message below and we'll
+					get back to you soon.
+				</p>
+			</header>
+
+			<!-- Glassmorphism Form Card -->
+			<div
+				class="glass-card rounded-4xl p-8 sm:p-12 shadow-2xl animate-in fade-in zoom-in-95 duration-1000"
+			>
+				<form id="contact-form" class="space-y-6">
+					<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+						<!-- Name Input -->
+						<div class="space-y-2">
+							<label for="name" class="block text-sm font-medium text-slate-300 ml-1"
+								>Your Name</label
+							>
+							<input
+								type="text"
+								id="name"
+								name="name"
+								class="w-full bg-slate-900/50 border border-slate-700/50 rounded-2xl px-5 py-4 focus:ring-2 focus:ring-blue-500/20 focus:outline-none focus:border-blue-500/50 transition-all font-light placeholder-slate-600"
+								placeholder="John Doe"
+								required
+							/>
+						</div>
+
+						<!-- Email Input -->
+						<div class="space-y-2">
+							<label for="email" class="block text-sm font-medium text-slate-300 ml-1"
+								>Email Address</label
+							>
+							<input
+								type="email"
+								id="email"
+								name="email"
+								class="w-full bg-slate-900/50 border border-slate-700/50 rounded-2xl px-5 py-4 focus:ring-2 focus:ring-blue-500/20 focus:outline-none focus:border-blue-500/50 transition-all font-light placeholder-slate-600"
+								placeholder="john@example.com"
+								required
+							/>
+						</div>
+					</div>
+
+					<!-- Subject Input -->
+					<div class="space-y-2">
+						<label for="subject" class="block text-sm font-medium text-slate-300 ml-1"
+							>Subject</label
+						>
+						<input
+							type="text"
+							id="subject"
+							name="subject"
+							class="w-full bg-slate-900/50 border border-slate-700/50 rounded-2xl px-5 py-4 focus:ring-2 focus:ring-blue-500/20 focus:outline-none focus:border-blue-500/50 transition-all font-light placeholder-slate-600"
+							placeholder="What's this about?"
+							required
+						/>
+					</div>
+
+					<!-- Message Textarea -->
+					<div class="space-y-2">
+						<label for="message" class="block text-sm font-medium text-slate-300 ml-1"
+							>Message</label
+						>
+						<textarea
+							id="message"
+							name="message"
+							rows="5"
+							class="w-full bg-slate-900/50 border border-slate-700/50 rounded-2xl px-5 py-4 focus:ring-2 focus:ring-blue-500/20 focus:outline-none focus:border-blue-500/50 transition-all font-light placeholder-slate-600 resize-none"
+							placeholder="Tell us everything..."
+							required
+						></textarea>
+					</div>
+
+					<!-- Submit Button -->
+					<div class="pt-4">
+						<button
+							type="submit"
+							id="submit-btn"
+							class="w-full py-4 px-6 bg-linear-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-semibold rounded-2xl shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] transition-all transform active:scale-[0.98] flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+						>
+							<span id="btn-text">Send Message</span>
+							<svg
+								id="loading-spinner"
+								class="animate-spin h-5 w-5 text-white hidden"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+							>
+								<circle
+									class="opacity-25"
+									cx="12"
+									cy="12"
+									r="10"
+									stroke="currentColor"
+									stroke-width="4"
+								></circle>
+								<path
+									class="opacity-75"
+									fill="currentColor"
+									d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+								></path>
+							</svg>
+						</button>
+					</div>
+				</form>
+
+				<!-- Status Message Container -->
+				<div
+					id="status-container"
+					class="mt-6 text-center transition-all duration-300 opacity-0 transform translate-y-2"
+				>
+					<p id="status-message" class="text-sm font-medium py-3 rounded-xl"></p>
+				</div>
+			</div>
+		</main>
+
+		<!-- Footer Area -->
+		<footer class="mt-12 text-slate-500 text-sm font-light space-y-2 text-center">
+			<p>
+				© 2026 Developed with Passion By
+				<a
+					href="https://lo-victoria.com/"
+					class="text-blue-400 hover:text-blue-300 underline-offset-4 hover:underline transition-all"
+					>Dev Vito Code</a
+				>
+			</p>
+			<div class="flex items-center justify-center space-x-4">
+				<span
+					class="inline-flex h-2 w-2 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.6)]"
+				></span>
+				<span>Server Active</span>
+			</div>
+		</footer>
+
+		<!-- Form Logic Integration -->
+		<script src="js/client.js" type="module"></script>
+	</body>
 </html>

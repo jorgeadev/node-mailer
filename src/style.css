@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+	--font-outfit: "Outfit", sans-serif;
+	--color-glass: rgba(255, 255, 255, 0.03);
+	--color-glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+	font-family: inherit; /* Tailwind 4 uses theme variables automatically */
+	background: radial-gradient(circle at top left, #0f172a, #020617);
+	min-height: 100vh;
+}
+
+.glass-card {
+	background: rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.neon-glow:focus {
+	box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+	border-color: rgba(59, 130, 246, 0.6);
+}
+
+.form-transition {
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
