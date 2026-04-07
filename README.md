@@ -103,5 +103,5 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 <p align="center">
-  Developed with ❤️ by <a href="https://lo-victoria.com/">Dev Vito Code</a>
+  Developed with ❤️ by <a href="https://github.com/jorgeadev">jorgeadev</a>
 </p>
