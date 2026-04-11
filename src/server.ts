@@ -13,9 +13,22 @@ const __dirname = path.dirname(__filename);
 const PORT = process.env.PORT || 5000;
 // instantiate an express app
 const app = express();
+const allowedOrigins = (process.env.ALLOWED_ORIGINS || "")
+	.split(",")
+	.map((origin) => origin.trim())
+	.filter(Boolean);
 
 // cors
-app.use(cors({ origin: "*" }));
+app.use(
+	cors({
+		origin: (origin, callback) => {
+			// Allow non-browser or same-origin requests without Origin header
+			if (!origin) return callback(null, true);
+			if (allowedOrigins.includes(origin)) return callback(null, true);
+			return callback(new Error("Not allowed by CORS"));
+		},
+	})
+);
 app.use(express.static("public"));
 
 const transporter = nodemailer.createTransport({
