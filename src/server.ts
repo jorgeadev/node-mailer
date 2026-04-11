@@ -5,6 +5,7 @@ import { fileURLToPath } from "url";
 import "dotenv/config";
 import nodemailer from "nodemailer";
 import multiparty from "multiparty";
+import rateLimit from "express-rate-limit";
 
 // ESM __dirname workaround
 const __filename = fileURLToPath(import.meta.url);
@@ -17,6 +18,13 @@ const allowedOrigins = (process.env.ALLOWED_ORIGINS || "")
 	.split(",")
 	.map((origin) => origin.trim())
 	.filter(Boolean);
+
+const indexRateLimiter = rateLimit({
+	windowMs: 15 * 60 * 1000, // 15 minutes
+	max: 100, // limit each IP to 100 requests per window
+	standardHeaders: true,
+	legacyHeaders: false,
+});
 
 // cors
 app.use(
@@ -97,7 +105,7 @@ app.post("/send", (req: Request, res: Response) => {
 });
 
 // index page (static HTML)
-app.get("/", (req: Request, res: Response) => {
+app.get("/", indexRateLimiter, (req: Request, res: Response) => {
 	res.sendFile(path.join(__dirname, "../public", "index.html"));
 });
 
