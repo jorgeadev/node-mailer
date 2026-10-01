@@ -24,8 +24,8 @@ importers:
         specifier: 4.3.0
         version: 4.3.0
       nodemailer:
-        specifier: 9.1.1
-        version: 9.1.1
+        specifier: 10.0.9
+        version: 10.0.9
     devDependencies:
       '@tailwindcss/cli':
         specifier: 4.2.2
@@ -1172,9 +1172,9 @@ packages:
   node-addon-api@7.1.1:
     resolution: {integrity: sha512-5m3bsyrjFWE1xf7nz7YXdN4udnVtXK6/Yfgn5qnahL6bCkf2yKt4k3nuTKAtT4r3IG8JNR2ncsIMdZuAzJjHQQ==}
 
-  nodemailer@9.1.1:
-    resolution: {integrity: sha512-izw9mVKFix6YSnC9eLgV6g1opl9DUlRio9ZNcq+Wu9Ujn2UwF+8Nl0B8nz22kEC+CTZCvinkxwJ0DeFbb6NwcQ==}
-    engines: {node: '>=6.0.0'}
+  nodemailer@10.0.9:
+    resolution: {integrity: sha512-BF0qcyplCwp+jMk6HCjFykBz/YhhZSsxrARhOldLwFWH+8kGjQsd2WIMIZhqEuyXRoGFi0ONbDeWDMDoL8MhLw==}
+    engines: {node: '>=20.0.0'}
 
   object-assign@4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
@@ -2158,7 +2158,7 @@ snapshots:
 
   node-addon-api@7.1.1: {}
 
-  nodemailer@9.1.1: {}
+  nodemailer@10.0.9: {}
 
   object-assign@4.1.1: {}
 
